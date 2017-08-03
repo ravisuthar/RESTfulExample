@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="urn:automatedIDgeneration" xmlns:tns="urn:automatedIDgeneration" xmlns="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <element name="evcid" type="tns:CreateEVCID"/>
+    <complexType name="CreateEVCID">
+        <sequence>
+            <element name="requestID" type="string" nillable="false"/>
+            <element name="SubscriberAccountNumber" type="string" nillable="false"/>
+            <element name="AccountName" type="string" nillable="false"/>
+            <element name="MarketID" type="string" nillable="true"/>
+            <element name="ENNIID" type="string" nillable="true"/>
+            <element name="TypeofEVC" type="string" nillable="false"/>
+             <element name="OffNetIndicator" type="string"  nillable="false"/>
+            <element name="CompanyCode" type="string"  nillable="false"/>
+        </sequence>
+    </complexType>
+</schema>

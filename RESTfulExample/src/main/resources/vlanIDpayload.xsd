@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="urn:automatedIDgeneration" xmlns:tns="urn:automatedIDgeneration" xmlns="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <element name="vlanids" type="tns:CreateVLANID"/>
+    <complexType name="CreateVLANID">
+        <sequence>
+            <element name="requestID" type="string" nillable="false"/>
+            <element name="SubscriberAccountNumber" type="string" nillable="false"/>
+            <element name="AccountName" type="string" nillable="false"/>
+            <element name="NNIID" type="string" nillable="false"/>
+            <element name="ELANorELINEIndicator" type="string"  nillable="false"/>
+            <element name="NumberofVLANIDsRequested" type="int"  nillable="false"/>
+        </sequence>
+    </complexType>
+</schema>

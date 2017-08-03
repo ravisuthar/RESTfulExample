@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="urn:automatedIDgeneration" xmlns:tns="urn:automatedIDgeneration" xmlns="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <element name="enniid" type="tns:CreateENNIID"/>
+    <complexType name="CreateENNIID">
+        <sequence>
+            <element name="requestID" type="string" nillable="false"/>
+            <element name="SubscriberAccountNumber" type="string" nillable="false"/>
+            <element name="AccountName" type="string" nillable="false"/>
+            <element name="MarketID" type="string" nillable="false"/>
+            <element name="BandwidthofNNI" type="string" nillable="false"/>
+            <element name="LAGGroup" type="string" nillable="false"/>
+             <element name="CompanyCode" type="string"  nillable="false"/>
+        </sequence>
+    </complexType>
+</schema>

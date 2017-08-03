@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="urn:automatedIDgenerationResponse" xmlns:tns="urn:automatedIDgenerationResponse" xmlns="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<!-- definition of simple elements -->
+	<complexType name="generatedIDs">
+			<sequence>
+				<element name="idType" type="string"/>
+				<element name="id" type="string"/>
+			</sequence>
+	</complexType>
+	<element name="automatedIDgenerationResponse" type="tns:automatedIDResponse"/>
+	<complexType name="automatedIDResponse">
+		<sequence>
+			<element name="requestID" type="string" nillable="false"/>
+			<element name="status" type="string" nillable="false"/>
+			<element name="errorCode" type="int" nillable="false"/>
+			<element name="errorText" type="string" nillable="true"/>
+			<element name="timestamp" type="string" nillable="true"/>
+			<element name="generatedIDs" type="tns:generatedIDs"  maxOccurs="unbounded"  />
+		</sequence>
+	</complexType>
+</schema>
